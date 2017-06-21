@@ -12,13 +12,13 @@ runCommand(argv[0]);
 function runCommand(command) {
 	switch(command) {
 		case "my-tweets":
-			displayTweets();
+			myTweets();
 			break;
 		case "spotify-this-song":
-			spotifySong();
+			spotifyThisSong();
 			break;
 		case "movie-this":
-			findMovie();
+			movieThis();
 			break;
 		case "do-what-it-says":
 			doWhatItSays();
@@ -28,9 +28,10 @@ function runCommand(command) {
 	}
 }
 
-function displayTweets() {
+function myTweets() {
 	var client = new Twitter(keys.twitterKeys);
 	 
+	// Note: I don't have any tweets, so I'm pulling tweets from nodejs.
 	var params = {screen_name: 'nodejs'};
 	client.get('statuses/user_timeline', params, function(error, tweets, response) {
 	  if (!error) {
@@ -39,14 +40,15 @@ function displayTweets() {
 	    console.log("");
 		console.log("Last 20 Tweets:");
 		for(let i = 0; i < 20; i++) {
-			console.log(tweets[i].created_at,tweets[i].text);
+			var date = new Date(tweets[i].created_at);
+			console.log(moment(date).format("M/D/YY h:mm A:"),tweets[i].text);
 		}
 		console.log("");
 	  }
 	});
 }
 
-function spotifySong() {
+function spotifyThisSong() {
 	var songName = argv[1];
  
 	var spotify = new Spotify(keys.spotifyKeys);
@@ -56,14 +58,28 @@ function spotifySong() {
 		return console.log('Error occurred: ' + err);
 		}
 	 
-		// console.log(data);
+		var song = data.tracks.items[0];
+		var artistString = "";
 
-		console.log(""); 
+		if(song.artists.length === 1) {
+			artistString = song.artists[0].name;
+		} else {
+			for(let i = 0; i < song.artists.length; i++) {
+				artist = song.artists[i];
+				artistString += artist.name + ", "
+			}
+		}
+
+	 	console.log(""); 
+	 	console.log("Artist(s):", artistString);
+	 	console.log("Song Name:", song.name);
+	 	console.log("Album:", song.album.name);
+	 	console.log("Preview Link:",song.preview_url);
 		console.log("");
 	});
 }
 
-function findMovie() {
+function movieThis() {
 	var movieName = argv[1];
 
 	var requestURL = "http://www.omdbapi.com/?apikey=" + keys.omdbkey + "&t=" + movieName.trim().replace(/ /g,"+");	
