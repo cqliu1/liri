@@ -62,7 +62,7 @@ function spotifyThisSong() {
 	 
 	spotify.search({ type: 'track', query: songName.trim() }, function(err, data) {
 		if (err) {
-		return console.log('Error occurred: ' + err);
+			return console.log('Error occurred: ' + err);
 		}
 	 
 		var song = data.tracks.items[0];
@@ -92,9 +92,6 @@ function movieThis() {
 	var requestURL = "http://www.omdbapi.com/?i=tt3896198&apikey=" + keys.omdbKey + "&t=" + movieName.trim().replace(/ /g,"+");	
 
 	request( requestURL, function (error, response, body) {
-		// console.log('error:', error); // Print the error if one occurred 
-		// console.log('statusCode:', response && response.statusCode); // Print the response status code if a response was received 
-		// console.log('body:', body); // Print the HTML for the Google homepage.
 		var movie = JSON.parse(body);
 		console.log("");
 		console.log("Title:",movie.Title); 
