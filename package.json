@@ -1,0 +1,19 @@
+{
+  "name": "liri",
+  "version": "1.0.0",
+  "description": "Language Interpretation and Recognition Interface",
+  "main": "liri.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cqliu1/liri.git"
+  },
+  "author": "Catherine Liu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cqliu1/liri/issues"
+  },
+  "homepage": "https://github.com/cqliu1/liri#readme"
+}
