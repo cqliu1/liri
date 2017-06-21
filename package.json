@@ -15,5 +15,10 @@
   "bugs": {
     "url": "https://github.com/cqliu1/liri/issues"
   },
-  "homepage": "https://github.com/cqliu1/liri#readme"
+  "homepage": "https://github.com/cqliu1/liri#readme",
+  "dependencies": {
+    "node-spotify-api": "^1.0.5",
+    "request": "^2.81.0",
+    "twitter": "^1.7.1"
+  }
 }
