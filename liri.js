@@ -7,7 +7,14 @@ var keys = require("./keys.js");
 
 var argv = process.argv.splice(2);
 
-runCommand(argv[0]);
+var command = argv[0];
+
+var inputName;
+
+if(argv.length > 1)
+	inputName = argv[1];
+
+runCommand(command);
 
 function runCommand(command) {
 	switch(command) {
@@ -49,7 +56,7 @@ function myTweets() {
 }
 
 function spotifyThisSong() {
-	var songName = argv[1];
+	var songName = inputName;
  
 	var spotify = new Spotify(keys.spotifyKeys);
 	 
@@ -80,26 +87,39 @@ function spotifyThisSong() {
 }
 
 function movieThis() {
-	var movieName = argv[1];
+	var movieName = inputName;
 
-	var requestURL = "http://www.omdbapi.com/?apikey=" + keys.omdbkey + "&t=" + movieName.trim().replace(/ /g,"+");	
+	var requestURL = "http://www.omdbapi.com/?i=tt3896198&apikey=" + keys.omdbKey + "&t=" + movieName.trim().replace(/ /g,"+");	
 
 	request( requestURL, function (error, response, body) {
-		console.log('error:', error); // Print the error if one occurred 
-		console.log('statusCode:', response && response.statusCode); // Print the response status code if a response was received 
-		console.log('body:', body); // Print the HTML for the Google homepage. 
+		// console.log('error:', error); // Print the error if one occurred 
+		// console.log('statusCode:', response && response.statusCode); // Print the response status code if a response was received 
+		// console.log('body:', body); // Print the HTML for the Google homepage.
+		var movie = JSON.parse(body);
+		console.log("");
+		console.log("Title:",movie.Title); 
+		console.log("Year:",movie.Year); 
+		console.log("IMDB Rating:",movie.imdbRating); 
+		console.log("Country:",movie.Country); 
+		console.log("Language:",movie.Language); 
+		console.log("Plot:",movie.Plot); 
+		console.log("Actors:",movie.Actors); 
+		console.log("Website:",movie.Website); 
+		console.log(""); 
 	});
-	
+
 }
 
 function doWhatItSays() {
-	fs.readFile('/random.txt', 'utf8', function(err, data) {
+	fs.readFile('./random.txt', 'utf8', function(err, data) {
 		if (err) throw err;
-		console.log(data);
+		// console.log(data);
 
-		var command = "";
-
-		runCommand(command);
+		var args = data.split(",");
+		
+		if(args.length > 1)
+			inputName = args[1];
+		runCommand(args[0]);
 	});
 	
 }
