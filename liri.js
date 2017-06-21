@@ -43,15 +43,19 @@ function myTweets() {
 	client.get('statuses/user_timeline', params, function(error, tweets, response) {
 	  if (!error) {
 	    // console.log(tweets);
-
-	    console.log("");
-		console.log("Last 20 Tweets:");
+	    let output = "\nLast 20 Tweets:\n";
 		for(let i = 0; i < 20; i++) {
 			var date = new Date(tweets[i].created_at);
-			console.log(moment(date).format("M/D/YY h:mm A:"),tweets[i].text);
+			output += moment(date).format("M/D/YY h:mm A:") + " " + tweets[i].text + "\n";
 		}
-		console.log("");
+		output += "\n";
+		console.log(output);
+		fs.appendFile("./log.txt",output,function(err) {
+			if (err) throw err;
+		})
 	  }
+
+	  
 	});
 }
 
@@ -76,13 +80,16 @@ function spotifyThisSong() {
 				artistString += artist.name + ", "
 			}
 		}
-
-	 	console.log(""); 
-	 	console.log("Artist(s):", artistString);
-	 	console.log("Song Name:", song.name);
-	 	console.log("Album:", song.album.name);
-	 	console.log("Preview Link:",song.preview_url);
-		console.log("");
+		let output = `
+Artist(s): ${artistString}
+Song Name: ${song.name}
+Album: ${song.album.name}
+Preview Link: ${song.preview_url}
+		`;
+		console.log(output);
+		fs.appendFile("./log.txt",output,function(err) {
+			if (err) throw err;
+		})
 	});
 }
 
@@ -93,16 +100,22 @@ function movieThis() {
 
 	request( requestURL, function (error, response, body) {
 		var movie = JSON.parse(body);
-		console.log("");
-		console.log("Title:",movie.Title); 
-		console.log("Year:",movie.Year); 
-		console.log("IMDB Rating:",movie.imdbRating); 
-		console.log("Country:",movie.Country); 
-		console.log("Language:",movie.Language); 
-		console.log("Plot:",movie.Plot); 
-		console.log("Actors:",movie.Actors); 
-		console.log("Website:",movie.Website); 
-		console.log(""); 
+
+		let output = `
+Title: ${movie.Title}
+Year: ${movie.Year}
+IMDB Rating: ${movie.imdbRating}
+Country: ${movie.Country}
+Language: ${movie.Language}
+Plot: ${movie.Plot}
+Actors: ${movie.Actors}
+Website: ${movie.Website}
+		`;
+
+		console.log(output);
+		fs.appendFile("./log.txt",output,function(err) {
+			if (err) throw err;
+		})
 	});
 
 }

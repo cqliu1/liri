@@ -1,0 +1,43 @@
+
+Artist(s): Sia
+Song Name: Move Your Body - Single Mix
+Album: Move Your Body
+Preview Link: https://p.scdn.co/mp3-preview/4d84fcf3c736a1e23fa2b5f9b2b1587f4d515370?cid=f845a1ae3f474e3abaf6a2606c0eca7e
+		
+Last 20 Tweets:
+6/20/17 6:00 AM: 📖 New book from the team @RisingStack: #nodejs monitoring, alerting and reliability 101. Download here: https://t.co/lPK5XXcG5A
+6/19/17 9:09 AM: Upgrading from #nodejs 6 to Node.js 8: a real-world performance comparison from @D__Gilbertson 👀 👉… https://t.co/D3DIOjef7X
+6/19/17 5:00 AM: We chatted with @dshaw &amp; @todaywasawesome about DockerCon, big take aways for #nodejs developers @ the event &amp; more… https://t.co/IsBKV2pbk2
+6/16/17 11:06 AM: ✨Nice tutorial on getting started with #AWS Lambda and #nodejs from the folks @RisingStack https://t.co/D7BLy7f671
+6/16/17 10:04 AM: Docs, Docs, Docs! Why documentation is so important and how to acquire it from @mikeal https://t.co/0UdsItvXXW https://t.co/LE9vHSq0IN
+6/16/17 8:00 AM: How does #nodejs enable digital transformation? Join our webinar with @lowes on July 12 @ 11AM PT to learn more https://t.co/1CI6zGimbr
+6/16/17 6:15 AM: RT @dburdese: Node.js 8: The First Week - DZone Web Dev #NodeJS @nodejs https://t.co/tVro5XUoCN https://t.co/ZklqyxbBlK
+6/16/17 6:14 AM: RT @RisingStack: Node Friday! 🔥🎉
+
+* @nodejs v8.1.1 &amp; v8.1.2 released
+* Two-Factor Auth with Node
+* Habits of a Happy Node Hacker 2017
+https…
+6/16/17 5:30 AM: For those who are thinking of making the move: Here's how to go from a hobbyist to a professional developer… https://t.co/MPRGMZnP5T
+6/15/17 2:18 PM: RT @captainsafia: There are thousands of programmers who've come before you and thousands who'll come after you and none of them write code…
+6/15/17 2:11 PM: 📖 New book from the team @RisingStack: #nodejs monitoring, alerting and reliability 101. Download here: https://t.co/lPK5XXcG5A
+6/15/17 1:03 PM: 😀 We chatted with Monica Ene-Pietrosanu about @intel's use of Node.js and contributing to #opensource in this 🎥 https://t.co/fpb0HFl5tw
+6/15/17 10:00 AM: What would the 🌎 look like without #JavaScript? @freeCodeCamp explores this alternate universe in this post https://t.co/ZOU3x2x4kI
+6/15/17 7:00 AM: Keeping the Internet Weird: How we can take the inspiration of creation from yesteryear &amp; apply it today:… https://t.co/8jrrZAqbaE
+6/15/17 6:15 AM: RT @rvagg: 8.1.2 of @nodejs released to fix add-on compile problems in 8.1.1 https://t.co/7CWHuhzVmZ see https://t.co/q2RIeAGDre for context
+6/14/17 2:00 PM: Debugging #nodejs with Google Chrome from @JacopoDaeli. Read on: https://t.co/jbQmwyCoPj
+6/14/17 11:35 AM: RT @cloudfoundry: Don’t miss @IBM’s track on @nodejs at #CFSummit, kicking off soon in SCCC Ballroom K
+6/14/17 11:00 AM: ✨Anyone who builds or uses native modules should test out the ABI-stable Node.js API (N-API):… https://t.co/PelMpwt67n
+6/14/17 9:00 AM: We’re hosting a webinar on July 12th on how to use #nodejs for digital transformation. Join the conversation here:… https://t.co/gx9abBMe7n
+6/14/17 7:00 AM: 🍬🍭🍫Can’t decide what candy to choose? Make a candy dispenser that chooses for you with #nodejs:… https://t.co/de4Gz7kP8v
+
+
+Title: The Matrix
+Year: 1999
+IMDB Rating: 8.7
+Country: USA
+Language: English
+Plot: A computer hacker learns from mysterious rebels about the true nature of his reality and his role in the war against its controllers.
+Actors: Keanu Reeves, Laurence Fishburne, Carrie-Anne Moss, Hugo Weaving
+Website: http://www.whatisthematrix.com
+		
